@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="@drawable/bg_card"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/imgFoto"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:layout_marginEnd="12dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tvLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Label"
+            android:textSize="16sp"
+            android:textColor="#333"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWaktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waktu"
+            android:textSize="14sp"
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/tvSuhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Suhu : "
+            android:textSize="12sp"
+            android:textColor="#999" />
+
+        <TextView
+            android:id="@+id/tvKelembapan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelembapan : "
+            android:textSize="12sp"
+            android:textColor="#999" />
+    </LinearLayout>
+
+    <!-- Tombol hapus -->
+    <ImageView
+        android:id="@+id/btnHapus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/sampah"
+        android:contentDescription="Hapus"
+        android:layout_marginStart="8dp"
+         />
+
+</LinearLayout>

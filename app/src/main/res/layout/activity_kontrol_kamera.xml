@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/melon">   <!-- FIX #1: hilangkan putih -->
+
+  <!-- ======================== HEADER ======================== -->
+  <LinearLayout
+      android:id="@+id/headerSection"
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:gravity="center"
+      android:background="@drawable/bg_isi1"
+      android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🎥 Stream Kamera"
+        android:textColor="#3A6B35"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+  </LinearLayout>
+
+  <!-- ========================== CONTENT ========================== -->
+  <LinearLayout
+      android:id="@+id/contentSection"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:orientation="vertical"
+      android:gravity="top|center_horizontal"
+      android:paddingLeft="16dp"
+      android:paddingRight="16dp"
+      android:paddingTop="16dp"
+      android:paddingBottom="0dp"
+      android:background="@drawable/bg_footer1"> <!-- FIX #2 -->
+
+    <!-- STREAMING VIDEO -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_card1">
+
+      <WebView
+          android:id="@+id/cameraView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" />
+
+      <ProgressBar
+          android:id="@+id/progressLoading"
+          android:layout_width="50dp"
+          android:layout_height="50dp"
+          android:layout_gravity="center"
+          android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- REFRESH BUTTON -->
+    <Button
+        android:id="@+id/btnRefreshStream"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:text="↻"
+        android:textColor="#4CAF50"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_card"
+        android:gravity="center" />
+
+  </LinearLayout>
+
+  <!-- ======================== FOOTER ======================== -->
+  <LinearLayout
+      android:id="@+id/footerSection"
+      android:layout_width="match_parent"
+      android:layout_height="65dp"
+      android:orientation="horizontal"
+      android:gravity="center"
+      android:background="@drawable/bg_header1"
+      android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/btnHome"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:src="@drawable/icon_home"
+        app:tint="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/btnMonitoringBottom"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:src="@drawable/icon_kamera"
+        app:tint="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/btnRiwayatBottom"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_weight="1"
+        android:src="@drawable/icon_histori"
+        app:tint="@android:color/white" />
+  </LinearLayout>
+
+</LinearLayout>

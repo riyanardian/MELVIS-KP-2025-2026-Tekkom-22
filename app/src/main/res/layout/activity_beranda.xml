@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA"
+    >
+
+    <!-- ============ HEADER ============ -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_header"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="12dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌿 MELVIS App"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvSubTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monitoring  AI Detection"
+            android:textColor="#E8F5E9"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:paddingTop="2dp" />
+    </LinearLayout>
+
+    <!-- ============ CONTENT (bg putih) di ATAS header kuning ============ -->
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/bg_isi"
+        android:padding="16dp"
+        android:elevation="8dp"
+        android:clipToPadding="false">
+
+
+    <LinearLayout
+        android:id="@+id/layoutSensor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/suhu"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suhu: 28°C"
+                android:textColor="#3A6B35"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="match_parent" />
+
+        <!-- Saklar 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/kelembapan"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/tvHumidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelembapan: 83%"
+                android:textColor="#3A6B35"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hasil Deteksi"
+            android:textColor="#121212"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:gravity="center" />
+    </LinearLayout>
+
+
+    <!-- HASIL DETEKSI -->
+        <LinearLayout
+            android:id="@+id/layoutDetectionWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+
+            <!-- Icon kiri -->
+            <ImageView
+                android:id="@+id/iconLeft"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/putih"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Card status + waktu -->
+            <LinearLayout
+                android:id="@+id/layoutDetection"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:elevation="4dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status: -"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#3A6B35" />
+
+                <TextView
+                    android:id="@+id/tvTimestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Waktu: -"
+                    android:textSize="14sp"
+                    android:textColor="#3A6B35" />
+            </LinearLayout>
+
+            <!-- Icon kanan -->
+            <ImageView
+                android:id="@+id/iconRight"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/putih"
+                android:layout_marginStart="12dp" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/imgLastDetection"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/icon_kamera"
+            android:background="@drawable/bg_card"
+            android:contentDescription="Deteksi daun"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <!-- ============ FOOTER NAV ============ -->
+    <LinearLayout
+        android:id="@+id/footerNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_footer"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp"
+        android:elevation="8dp">
+
+        <ImageView
+            android:id="@+id/btnHome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_home"
+            app:tint="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/btnMonitoringBottom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_kamera"
+            app:tint="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/btnRiwayatBottom"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:src="@drawable/icon_histori"
+            app:tint="@android:color/black" />
+    </LinearLayout>
+</FrameLayout>

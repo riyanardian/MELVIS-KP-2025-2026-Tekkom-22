@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Outer shadow hijau -->
+    <item android:left="3dp" android:top="3dp" android:right="3dp" android:bottom="3dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#224CAF50"/>
+        </shape>
+    </item>
+
+    <!-- Inner shadow (layer gelap di dalam) -->
+    <item android:left="2dp" android:top="2dp" android:right="2dp" android:bottom="2dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#204CAF50"
+                android:endColor="#00FFFFFF"
+                android:angle="270"/>
+        </shape>
+    </item>
+
+    <!-- Card utama -->
+    <item>
+        <shape android:shape="rectangle">
+
+            <solid android:color="#FFFFFF"/>
+
+            <!-- Inner stroke -->
+            <stroke
+                android:width="2dp"
+                android:color="#81C784" />
+
+            <!-- Tanpa radius (kotak) -->
+
+            <padding
+                android:left="10dp"
+                android:top="10dp"
+                android:right="10dp"
+                android:bottom="10dp"/>
+        </shape>
+    </item>
+
+</layer-list>
